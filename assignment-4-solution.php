@@ -41,8 +41,7 @@ function checkString(string $str){
     $flag = true;
 
     for($i=0; $i < $len; $i++){
-        $ch = substr($str,$i,1);
-        $asciiValue = ord($ch);
+        $asciiValue = ord($str[$i]);
 
         if(!(
             ($asciiValue >= 48 && $asciiValue <= 57)
