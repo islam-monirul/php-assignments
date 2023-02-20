@@ -33,6 +33,34 @@ function removeLastAndFirst($arr){
     return $arr;
 }
 
+/* =======================================================
+    4. function to check is string contains only letters and whitespace
+========================================================== */
+function checkString(string $str){
+    $len = strlen($str);
+    $flag = true;
+
+    for($i=0; $i < $len; $i++){
+        $ch = substr($str,$i,1);
+        $asciiValue = ord($ch);
+
+        if(!(
+            ($asciiValue >= 48 && $asciiValue <= 57)
+            || ($asciiValue >= 65 && $asciiValue <= 90)
+            || ($asciiValue >= 97 && $asciiValue <= 122)
+        )){
+            $flag = false;
+            break;
+        }
+
+    }
+
+    return $flag;
+}
+
+
+
+
 
 /* =======================================================
     Result checking for each 5 self defined functions
@@ -53,9 +81,20 @@ echo "\n\n============== Answer of problem 2 ==============\n\n";
 echo concatString("Monirul","Islam");
 
 
-/* Result checking for function 2 */
+/* Result checking for function 3 */
 $answer3 = removeLastAndFirst(array(1,2,3,4,5));
 echo "\n\n============== Answer of problem 3 ==============\n\n";
 foreach($answer3 as $item){
     echo $item." ";
+}
+
+
+/* Result checking for function 4 */
+echo "\n\n============== Answer of problem 4 ==============\n\n";
+$checkStr = "abcdefg123";
+if(checkString($checkStr)){
+    echo "Yes.";
+}
+else{
+    echo "No.";
 }
