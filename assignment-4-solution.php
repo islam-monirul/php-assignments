@@ -35,7 +35,7 @@ function removeLastAndFirst($arr){
 
 
 /* =======================================================
-    4. function to check is string contains only letters and whitespace
+    4. function to check if string contains only letters and whitespace
 ========================================================== */
 function checkString(string $str){
     $len = strlen($str);
@@ -52,7 +52,6 @@ function checkString(string $str){
             $flag = false;
             break;
         }
-
     }
 
     return $flag;
@@ -76,48 +75,50 @@ function findSecondLargest($numArray):int{
 }
 
 
-/* =======================================================
-    Result checking for each 5 self defined functions
-    ======================================================= */
+
+
+
+
+
+/* ==============================================================================
+    Output checking for each 5 self defined functions
+================================================================================= */
 
 /* Result checking for function 1 */
-$strs = array("Monir", "Islam", "Shojib", "Ostad");
-// sorting the array of strings
-usort($strs, "sortArrayofStrings");
-echo "\n\n============== Answer of problem 1 ==============\n\n";
+$strs = array("Problems", "Solving", "OstadPlatform", "Monir");
+usort($strs, "sortArrayofStrings"); // sorting the array of strings
+
+echo "Output for Problem 1: ";
 foreach($strs as $str){
     echo $str." ";
 }
 
 
 /* Result checking for function 2 */
-echo "\n\n============== Answer of problem 2 ==============\n\n";
+echo "\nOutput for Problem 2: ";
 echo concatString("Monirul","Islam");
 
 
 /* Result checking for function 3 */
 $answer3 = removeLastAndFirst(array(1,2,3,4,5));
-echo "\n\n============== Answer of problem 3 ==============\n\n";
+echo "\nOutput for Problem 3: ";
 foreach($answer3 as $item){
     echo $item." ";
 }
 
 
 /* Result checking for function 4 */
-echo "\n\n============== Answer of problem 4 ==============\n\n";
-$checkStr = "Monirul Islam 8";
+$checkStr = "Monirul Islam";
+echo "\nOutput for Problem 4: ";
 if(checkString($checkStr)){
-    echo "Yes, only letters and whitespace found in the string.";
+    echo "Yes, only letters and whitespace found in the given string.";
 }
 else{
-    echo "No. The string doesn't contain only letters and whitespace.";
+    echo "No. Given string doesn't contain only letters and whitespace.";
 }
 
 
 /* Result checking for function 5 */
-echo "\n\n============== Answer of problem 5 ==============\n\n";
-$secondMax = findSecondLargest(array(12,6,7,9,5));
+$secondMax = findSecondLargest(array(12,6,13,9,5));
+echo "\nOutput for Problem 5: ";
 echo "Second Largest number in the given array is = $secondMax.";
-
-
-echo "\n\n";
