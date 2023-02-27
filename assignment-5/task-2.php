@@ -1,13 +1,8 @@
 <?php
-//Task 2: Basic OOP in PHP
+// task 2
 class Person {
     public $name;
     private $email;
-
-    public function __construct( $name, $email ) {
-        $this->name = $name;
-        $this->email = $email;
-    }
 
     public function setName( $name ) {
         $this->name = $name;
@@ -26,8 +21,8 @@ class Person {
     }
 }
 
-$newPerson = new Person( "", "" );
-$newPerson->setName( "Monir" );
-$newPerson->setEmail( "islammonirul.cse@gmail.com" );
+$task2_person = new Person();
+$task2_person->setName( "Monir" );
+$task2_person->setEmail( "islammonirul.cse@gmail.com" );
 
-echo "Name: {$newPerson->getName()} <br/> Email: {$newPerson->getEmail()}";
+?>
