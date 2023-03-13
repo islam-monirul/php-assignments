@@ -32,12 +32,12 @@
           $fileToUpload = $directoryToUpload.$filename;
           
 
-          // if file upload failed
+          // if upload fails
           if (!move_uploaded_file($uImage['tmp_name'], $fileToUpload)) {
                die('Image upload failed.');
           }
 
-          // If not termination occur then saving data to a CSV file
+          // If no termination occur then saving data to a CSV file
           $userData = array($uname, $uemail, $filename);
           $csvFile = fopen('users.csv', 'a');
           
@@ -55,7 +55,7 @@
           $_SESSION['name'] = $uname;
           setcookie('name', $uname, time() + (86400 * 30), '/');
 
-          // Redirecting to success page
+          // Redirecting to registered users page
           header('Location: registeredUsersPage.php');
 
           exit();
