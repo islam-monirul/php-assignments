@@ -10,12 +10,14 @@
      <title>Registered Users</title>
 </head>
 <body>
+     <h3 id="assignment-title">Registered Users</h3>
+     <p class="sub-title">Users list fetched from "users.csv" file</p>
      <Table>
           <thead>
                <th>SL.</th>
-               <th>Name</th>
-               <th>Email</th>
-               <th>Picture</th>
+               <th>User Name</th>
+               <th>Email Address</th>
+               <th>Image</th>
           </thead>
 
           <tbody>
@@ -24,11 +26,12 @@
                     $fileToRead = fopen("users.csv", "r");
                     // Reading data from csv
                     while (($userData = fgetcsv($fileToRead)) !== FALSE) {
+                         $serialNo++;
                          echo "<tr>";
                          echo "<td>".$serialNo."</td>";
                          echo "<td>".$userData[0]."</td>";
                          echo "<td>".$userData[1]."</td>";
-                         echo "<td><img src='uploads/".$userData[2]."' width='50'></td>";
+                         echo "<td><img src='uploads/".$userData[2]."' class='profile_pic'></td>";
                          echo "</tr>";
                     }
                     

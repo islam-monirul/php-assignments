@@ -82,3 +82,31 @@ input[type="submit"]:hover {
   color: gainsboro;
   font-weight: 300;
 }
+
+table {
+  margin: 25px auto;
+  padding: 10px;
+
+  border-collapse: collapse;
+}
+
+th {
+  background-color: black;
+  color: white;
+
+  padding: 10px;
+  text-align: left;
+  font-weight: 200;
+}
+
+th,
+td {
+  border: 1px solid gainsboro;
+  padding: 10px;
+  text-align: left;
+}
+
+.profile_pic {
+  width: 50px;
+  border-radius: 50px;
+}
