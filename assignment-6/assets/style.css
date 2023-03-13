@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@300;400&display=swap");
+
+* {
+  font-family: "Lexend", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#assignment-title {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.sub-title {
+  text-align: center;
+  font-weight: 300;
+  color: gray;
+
+  margin-top: 5px;
+}
+
+.task-title {
+  color: crimson;
+  margin-bottom: 15px;
+}
+
+.form-block {
+  width: 30%;
+  margin: auto;
+  margin-top: 30px;
+  padding: 10px;
+  border: 1px solid gainsboro;
+}
+
+.inputGroup {
+  width: 70%;
+  margin: 10px auto;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 5px;
+}
+
+input[type="file"] {
+  padding: 5px;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 10px 5px;
+  margin-top: 5px;
+
+  background-color: crimson;
+  color: white;
+
+  border: 1px solid gainsboro;
+
+  cursor: pointer;
+
+  transition: all 0.5s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: black;
+  color: gainsboro;
+}
+
+.output-block {
+  width: 30%;
+  margin: auto;
+  margin-top: 30px;
+  padding: 25px;
+
+  background-color: black;
+}
+
+.output-block p {
+  color: gainsboro;
+  font-weight: 300;
+}
