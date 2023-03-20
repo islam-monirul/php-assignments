@@ -26,3 +26,9 @@ d -> Write a query to count the number of employees who work in the "Marketing" 
     JOIN departments as d
     ON e.department_id = d.id
     WHERE d.name LIKE "Marketing";
+
+e -> Write a query to update the salary column of the employee with an id of 1001 to 60000.
+
+    UPDATE employees
+    SET salary = 55000
+    WHERE id BETWEEN 1001 AND 60000;
