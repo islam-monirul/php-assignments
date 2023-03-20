@@ -13,3 +13,8 @@ b -> Write a query to select only the name and salary columns of all employees w
     SELECT name, salary
     FROM employees
     WHERE salary > 50000;
+
+c -> Write a query to calculate the average salary of all employees.
+
+    SELECT AVG(salary) as Average_Salary
+    FROM employees;
