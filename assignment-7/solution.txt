@@ -38,3 +38,12 @@ f -> Write a query to delete all employees whose salary is less than 30000.
     DELETE
     FROM employees
     WHERE salary < 30000;
+
+
+
+** departments table operations
+
+a -> Write a query to select all columns and rows from the departments table.
+
+    SELECT *
+    FROM departments;
