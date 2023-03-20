@@ -1,0 +1,10 @@
+Solution by Monirul Islam
+Created on - 20 March, 2023
+
+** employees table operations:
+
+a -> Write a query to select all columns and rows from the employees table.
+
+    SELECT *
+    FROM employees;
+
