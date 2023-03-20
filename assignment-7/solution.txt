@@ -61,3 +61,7 @@ c -> Write a query to calculate the total number of employees in each department
     JOIN employees as e
     ON d.id = e.department_id
     GROUP BY e.department_id;
+
+d -> Write a query to insert a new department called "Research" with a manager named "John Doe".
+
+    INSERT INTO departments(name, manager) VALUES('Research', 'John Doe');
