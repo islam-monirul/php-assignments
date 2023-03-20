@@ -18,3 +18,11 @@ c -> Write a query to calculate the average salary of all employees.
 
     SELECT AVG(salary) as Average_Salary
     FROM employees;
+
+d -> Write a query to count the number of employees who work in the "Marketing" department.
+
+    SELECT COUNT(*) as No_of_employees_in_Marketing_Dept
+    FROM employees as e
+    JOIN departments as d
+    ON e.department_id = d.id
+    WHERE d.name LIKE "Marketing";
