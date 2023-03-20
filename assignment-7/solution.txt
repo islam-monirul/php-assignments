@@ -47,3 +47,10 @@ a -> Write a query to select all columns and rows from the departments table.
 
     SELECT *
     FROM departments;
+
+b -> Write a query to select only the name and manager columns of the "Finance" department.
+
+    SELECT name, manager
+    FROM departments
+    WHERE name LIKE "Finance";
+
