@@ -54,3 +54,10 @@ b -> Write a query to select only the name and manager columns of the "Finance" 
     FROM departments
     WHERE name LIKE "Finance";
 
+c -> Write a query to calculate the total number of employees in each department.
+
+    SELECT d.name, COUNT(*)
+    FROM departments as d
+    JOIN employees as e
+    ON d.id = e.department_id
+    GROUP BY e.department_id;
