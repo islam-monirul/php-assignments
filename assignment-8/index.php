@@ -1,7 +1,3 @@
-<?php
-     include "registration.php";
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
