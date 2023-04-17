@@ -27,6 +27,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                die('You must provide valid email.');
           }
     }
+
+          // Validate password and confirm password
+          if (empty($_POST["password"])) {
+               $passwordErr = "Password is required";
+           } 
+           else {
+               $password = test_input($_POST["password"]);
+               if (empty($_POST["confirmpassword"])) {
+                   $confirmpasswordErr = "Please confirm password";
+               } else {
+                   $confirmpassword = test_input($_POST["confirmpassword"]);
+                   if ($password != $confirmpassword) {
+                       $confirmpasswordErr = "Passwords do not match";
+                   }
+               }
+           }
+       
+           // Display confirmation message if no errors found
+           if (empty($firstnameErr) && empty($lastnameErr) && empty($emailErr) && empty($passwordErr) && empty($confirmpasswordErr)) {
+               echo "<p>Registration successful! Welcome, $firstname!</p>";
+           }
 }
 
 ?>
